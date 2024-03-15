@@ -1,3 +1,4 @@
+import postcss from 'postcss';
 import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config
