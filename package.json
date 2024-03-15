@@ -4,7 +4,6 @@
   "version": "1.0.1",
   "description": "Combine your internet connections to maximize speed",
   "main": ".vite/build/main.js",
-
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -43,6 +42,7 @@
     "typescript": "~4.5.4"
   },
   "dependencies": {
+    "@electron-forge/maker-wix": "^7.3.0",
     "electron-squirrel-startup": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
