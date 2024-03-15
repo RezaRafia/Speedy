@@ -1,9 +1,4 @@
 import type { ForgeConfig } from '@electron-forge/shared-types';
-import { MakerSquirrel } from '@electron-forge/maker-squirrel';
-import { MakerZIP } from '@electron-forge/maker-zip';
-import { MakerDeb } from '@electron-forge/maker-deb';
-import { MakerRpm } from '@electron-forge/maker-rpm';
-import { VitePlugin } from '@electron-forge/plugin-vite';
 import path from 'path';
 
 const config: ForgeConfig = {
@@ -13,6 +8,13 @@ const config: ForgeConfig = {
   },
   rebuildConfig: {},
   makers: [
+    {
+      name: '@electron-forge/maker-wix',
+      config: {
+        language: 1033,
+        manufacturer: 'Speedy'
+      }
+    },
     {
       name: '@electron-forge/maker-squirrel',
       config: {
@@ -56,7 +58,8 @@ const config: ForgeConfig = {
           owner: 'RezaRafia',
           name: 'Speedy'
         },
-        prerelease: true
+        prerelease: false,
+        draft: true
       }
     }
   ]

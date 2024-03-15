@@ -4,29 +4,7 @@
   "version": "1.0.0",
   "description": "Combine your internet connections to maximize speed",
   "main": ".vite/build/main.js",
-  "config": {
-    "forge": {
-      "makers": [
-        {
-          "name": "@electron-forge/maker-zip"
-        }
-      ],
-      "packagerConfig": {
-        "icon": "src/assets/icon.icns"
-      },
-      "publishers": [
-        {
-          "name": "@electron-forge/publisher-github",
-          "config": {
-            "repository": {
-              "owner": "RezaRafia",
-              "name": "Speedy"
-            }
-          }
-        }
-      ]
-    }
-  },
+
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
