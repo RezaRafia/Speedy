@@ -24,6 +24,4 @@ jobs:
       - name: ls
         run: ls -la
       - name: Build
-        run: yarn publish
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn make
