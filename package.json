@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Combine your internet connections to maximize speed",
   "main": "./dist/main.js",
-
+  
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
