@@ -1,6 +1,9 @@
 name: Build/release
 
-on: push
+on:
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   release:
@@ -21,10 +24,7 @@ jobs:
         run: npm install -g yarn
       - name: Yarn
         run: yarn
-      - name: Install global dependencies
-        run: npm install -g yarn
-      - name: Forge Package
-        uses: yarn make
-        with:
-          github_token: ${{ secrets.github_token }}
-          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+      - name: Build
+        run: yarn make
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
