@@ -4,36 +4,62 @@ import { MakerZIP } from '@electron-forge/maker-zip';
 import { MakerDeb } from '@electron-forge/maker-deb';
 import { MakerRpm } from '@electron-forge/maker-rpm';
 import { VitePlugin } from '@electron-forge/plugin-vite';
+import path from 'path';
 
 const config: ForgeConfig = {
   packagerConfig: {
-    icon: "src/assets/icon"
+    asar: true,
+    icon: path.join(process.cwd(), 'main', 'build', 'icon'),
   },
   rebuildConfig: {},
-  makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
-  plugins: [
-    new VitePlugin({
-      // `build` can specify multiple entry builds, which can be Main process, Preload scripts, Worker process, etc.
-      // If you are familiar with Vite configuration, it will look really familiar.
-      build: [
-        {
-          // `entry` is just an alias for `build.lib.entry` in the corresponding file of `config`.
-          entry: 'src/main.ts',
-          config: 'vite.main.config.ts',
+  makers: [
+    {
+      name: '@electron-forge/maker-squirrel',
+      config: {
+        bin: 'Speedy'
+      }
+    },
+    {
+      name: '@electron-forge/maker-dmg',
+      config: {
+        bin: 'Speedy'
+      },
+    },
+    {
+      name: '@electron-forge/maker-deb',
+      config: {
+        bin: 'Speedy',
+        options: {
+          icon: path.join(process.cwd(), 'main', 'build', 'icon.png'),
         },
-        {
-          entry: 'src/preload.ts',
-          config: 'vite.preload.config.ts',
-        },
-      ],
-      renderer: [
-        {
-          name: 'main_window',
-          config: 'vite.renderer.config.ts',
-        },
-      ],
-    }),
+      }
+    },
+    {
+      name: '@electron-forge/maker-rpm',
+      config: {
+        bin: 'Speedy',
+        icon: path.join(process.cwd(), 'main', 'build', 'icon.png'),
+      }
+    }
   ],
+  plugins: [
+    {
+      name: '@electron-forge/plugin-auto-unpack-natives',
+      config: {}
+    }
+  ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'RezaRafia',
+          name: 'Speedy'
+        },
+        prerelease: true
+      }
+    }
+  ]
 };
 
 export default config;
