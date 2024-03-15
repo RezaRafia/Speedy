@@ -7,7 +7,4 @@ export default defineConfig({
       include: '**/*.css',
     }),
   ],
-  build: {
-    outDir: 'dist',
-  }
 });
