@@ -21,7 +21,5 @@ jobs:
         run: npm install -g yarn
       - name: Yarn
         run: yarn
-      - name: ls
-        run: ls -la
       - name: Build
         run: yarn make
