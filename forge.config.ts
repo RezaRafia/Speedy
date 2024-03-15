@@ -9,6 +9,12 @@ const config: ForgeConfig = {
   rebuildConfig: {},
   makers: [
     {
+      name: "@electron-forge/maker-zip",
+      config: {
+        bin: 'Speedy'
+      }
+    },
+    {
       name: '@electron-forge/maker-squirrel',
       config: {
         bin: 'Speedy'

@@ -17,5 +17,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: make
-        run: npm run make
+      - name: Install yarn
+        run: npm install -g yarn
+      - name: Yarn
+        run: yarn
+      - name: Install global dependencies
+        run: npm install -g yarn ngrok
+      - name: Forge Package
+        if: matrix.os == 'macos-latest'
+        run: yarn make
