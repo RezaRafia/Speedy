@@ -1,7 +1,7 @@
 {
   "name": "speedy",
   "productName": "speedy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Combine your internet connections to maximize speed",
   "main": ".vite/build/main.js",
 

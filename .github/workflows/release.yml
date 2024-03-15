@@ -20,7 +20,7 @@ jobs:
           node-version: 16
 
       - name: Build/release Electron app
-        uses: wenwuwu/action-electron-forge@v1.4.0
+        uses: wenwuwu/action-electron-forge@v1.4.7
         with:
           github_token: ${{ secrets.github_token }}
           release: ${{ startsWith(github.ref, 'refs/tags/v') }}
