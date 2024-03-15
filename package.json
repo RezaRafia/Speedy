@@ -42,6 +42,7 @@
     "typescript": "~4.5.4"
   },
   "dependencies": {
+    "@electron-forge/maker-dmg": "^7.3.0",
     "@electron-forge/maker-wix": "^7.3.0",
     "electron-squirrel-startup": "^1.0.0",
     "react": "^18.2.0",
