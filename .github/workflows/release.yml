@@ -17,13 +17,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Install yarn
-        run: npm install -g yarn
-      - name: Yarn
-        run: yarn
-      # - name: Build
-      #   run: yarn make
+      - name: npm install
+        run: npm install
       - name: publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: yarn publish-app
+        run: npm run publish-app
