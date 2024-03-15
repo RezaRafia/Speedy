@@ -3,7 +3,7 @@
   "productName": "speedy",
   "version": "1.0.1",
   "description": "Combine your internet connections to maximize speed",
-  "main": ".vite/build/main.js",
+  "main": "./build/main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
