@@ -3,49 +3,8 @@
   "productName": "speedy",
   "version": "1.0.0",
   "description": "Combine your internet connections to maximize speed",
-  "main": "src/main.ts",
-  "config": {
-    "forge": {
-      "packagerConfig": {
-        "asar": true
-      },
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "speedy"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ],
-      "publishers": [
-        {
-          "name": "@electron-forge/publisher-github",
-          "config": {
-            "repository": {
-              "owner": "rezarafia",
-              "name": "speedy"
-            },
-            "prerelease": false,
-            "draft": true
-          }
-        }
-      ]
-    }
-  },
+  "main": "./dist/main.js",
+
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
