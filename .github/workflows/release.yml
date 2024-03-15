@@ -26,3 +26,6 @@ jobs:
       - name: Forge Package
         if: matrix.os == 'macos-latest'
         run: yarn make
+        with:
+          github_token: ${{ secrets.github_token }}
+          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
