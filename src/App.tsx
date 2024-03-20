@@ -103,7 +103,7 @@ export default function App(){
         </div>
         
 
-        <p className="text-[#EDF0F4] font-medium text-[14px] leading-[130%] pb-[8px]">Logs</p>
+        <p className="text-[#EDF0F4] font-medium text-[14px] leading-[130%] pb-[8px]">Log</p>
         <p className="text-[#ACB4C0] font-normal text-[14px] leading-[130%] pb-[16px] ">Proxy server debug info</p>
         <div className="bg-[#23283D] rounded-[16px] p-[24px] overflow-y-auto flex-1 min-h-[120px] max-h-[320px]">
           {outputLog?.length > 0 && outputLog?.map( (value, index) => (
