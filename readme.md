@@ -9,7 +9,7 @@ If you are in a place that you have multiple internet connections ( WiFi, 3g, 4g
 
 ## Screenshot
 
-![[Speedy Screenshot](https://github.com/RezaRafia/Speedy/assets/28136738/3cee7b58-d6a6-479d-9486-bfbe4dc03e26)](screenshot.png)
+<img src="https://github.com/RezaRafia/Speedy/assets/28136738/3cee7b58-d6a6-479d-9486-bfbe4dc03e26" width="480" alt="Screenshot">
 
 ## Installation
 
