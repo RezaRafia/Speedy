@@ -9,6 +9,7 @@ const config: ForgeConfig = {
   packagerConfig: {
     icon: '../images/icon.ico',
     name: 'Speedy',
+    executableName: 'Speedy',
   },
   rebuildConfig: {},
   makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
