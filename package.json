@@ -1,7 +1,7 @@
 {
   "name": "speedy",
   "productName": "speedy",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Combine your internet connections to maximize speed",
   "main": "./dist/main.js",
   
